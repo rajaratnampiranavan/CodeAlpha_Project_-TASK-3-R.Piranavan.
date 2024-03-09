@@ -1,16 +1,21 @@
 function login() {
    
-    let accessToken = 'YOUR_API_KEY';
-
-    
-    displayFeeds(accessToken);
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('feeds').style.display = 'block';
+    displayFeeds();
 }
 
-function displayFeeds(accessToken) {
-    
-    let feedsSection = document.getElementById('feeds');
-    feedsSection.innerHTML = 'Fetching feeds...';
+function displayFeeds() {
 
-  
-    feedsSection.innerHTML = 'CODE ALPHA.';
+    const feedsDiv = document.getElementById('feeds');
+    feedsDiv.innerHTML = `
+        <div>
+            <h2>Facebook</h2>
+            <p>Sample Facebook feed content...</p>
+        </div>
+        <div>
+            <h2>Twitter</h2>
+            <p>Sample Twitter feed content...</p>
+        </div>
+    `;
 }
